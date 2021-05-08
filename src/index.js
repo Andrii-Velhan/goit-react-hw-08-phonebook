@@ -10,8 +10,8 @@ import './styles/base.scss';
 
 ReactDOM.render(
   // <React.StrictMode>
-  // <Provider store={store.store}>
-  <Provider store={store}>
+  <Provider store={store.store}>
+    {/* <Provider store={store}> */}
     {/* <PersistGate loading={<Spinner />} persistor={store.persistor}> */}
     <BrowserRouter>
       <App />
