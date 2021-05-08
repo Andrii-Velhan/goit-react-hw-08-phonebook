@@ -27,7 +27,7 @@ class RegisterView extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onRegister(this.state); //add user register
+    this.props.onRegister(this.state);
 
     this.setState({ name: '', email: '', password: '' });
   };

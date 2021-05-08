@@ -101,4 +101,6 @@ const getCurrentUser = () => async (dispatch, getState) => {
   }
 };
 
-export default { register, logOut, logIn, getCurrentUser };
+const authOperations = { register, logOut, logIn, getCurrentUser };
+
+export default authOperations;
