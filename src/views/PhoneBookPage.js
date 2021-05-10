@@ -23,9 +23,9 @@ import { connect } from 'react-redux';
 import { phoneBookOperations, phoneBookSelectors } from '../redux/phoneBook';
 
 const barStyles = {
-  display: 'flex',
-  alignItems: 'flex-end',
-  marginBottom: 20,
+  // display: 'flex',
+  // alignItems: 'flex-end',
+  // marginBottom: 20,
 };
 
 class PhoneBookPage extends Component {

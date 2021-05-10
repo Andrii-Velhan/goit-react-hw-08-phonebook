@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'; //add
-import { authSelectors, authOperations } from '../../redux/auth'; //add
-import defaultAvatar from './default-avatar.png'; //add
+import { connect } from 'react-redux';
+import { authSelectors, authOperations } from '../../redux/auth';
+import defaultAvatar from './default-avatar.png';
 
 const styles = {
   container: {
