@@ -25,7 +25,7 @@ class PhoneBookPage extends Component {
     return (
       <Container>
         <div style={barStyles}>
-          <Logo />
+          <Logo title="Phonebook" />
 
           <ContactForm />
 

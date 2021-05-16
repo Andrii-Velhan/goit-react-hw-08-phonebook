@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
+import Logo from '../components/Logo';
 class RegisterView extends Component {
   state = {
     name: '',
@@ -25,7 +26,7 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Enter your data</h1>
+        <Logo title="Enter your data" />
 
         <form onSubmit={this.handleSubmit} className="Form" autoComplete="off">
           <label className="Label" htmlFor="name">

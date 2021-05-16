@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'; //add
-import { authOperations } from '../redux/auth'; //add
+import { connect } from 'react-redux';
+import { authOperations } from '../redux/auth';
+import Logo from '../components/Logo';
 class LoginView extends Component {
   state = {
     email: '',
@@ -24,7 +25,7 @@ class LoginView extends Component {
 
     return (
       <div>
-        <h1>Enter your data</h1>
+        <Logo title="Enter your data" />
 
         <form onSubmit={this.handleSubmit} className="Form" autoComplete="off">
           <label className="Label" htmlFor="email">

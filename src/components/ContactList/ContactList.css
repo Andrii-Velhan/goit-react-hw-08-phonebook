@@ -2,6 +2,7 @@
 	margin: 10px 0;
 	padding: 0;
 	list-style-type: square;
+	background-color: $white;
 }
 
 .ContactList__item {
@@ -12,6 +13,7 @@
 	border-radius: 3px;
 	box-shadow: 2px 4px 5px rgba(0.5, 0.2, 0.2, 0.2);
 	border: 1px solid rgba(118, 168, 214, 0.829);
+	background-color: rgb(195, 222, 235);
 }
 
 .ContactList__item:not(:last-child) {
@@ -24,7 +26,8 @@
 }
 
 .ContactList__item-fade-enter-done {
-	background-color: rgb(195, 222, 235);
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .ContactList__item-fade-enter-active {

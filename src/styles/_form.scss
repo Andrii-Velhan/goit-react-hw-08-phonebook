@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@import "./colors";
 
 .Form__input {
 	max-width: 100%;
@@ -21,6 +21,7 @@
 	border: 1px solid grey;
 	border-radius: 3px;
 	box-shadow: 2px 4px 5px rgba(0.5, 0.2, 0.3, 0.2);
+	background-color: $white;
 }
 
 .Form__button {
