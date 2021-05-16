@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; //add
 import { authOperations } from '../redux/auth'; //add
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
-
 class LoginView extends Component {
   state = {
     email: '',
@@ -36,34 +24,34 @@ class LoginView extends Component {
 
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1>Enter your data</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-          style={styles.form}
-          autoComplete="off"
-        >
-          <label style={styles.label}>
-            Почта
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
+        <form onSubmit={this.handleSubmit} className="Form" autoComplete="off">
+          <label className="Label" htmlFor="email">
+            Email
           </label>
+          <input
+            type="email"
+            name="email"
+            className="Form__input"
+            value={email}
+            onChange={this.handleChange}
+          />
 
-          <label style={styles.label}>
-            Пароль
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
+          <label className="Label" htmlFor="password">
+            Password
           </label>
+          <input
+            type="password"
+            name="password"
+            className="Form__input"
+            value={password}
+            onChange={this.handleChange}
+          />
 
-          <button type="submit">Войти</button>
+          <button type="submit" className="Form__button">
+            Log in
+          </button>
         </form>
       </div>
     );

@@ -1,15 +1,3 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import Container from '../components/Container';
-// import TodoList from '../components/ContactList';
-// import TodoEditor from '../components/TodoEditor';
-// import Filter from '../components/Filter';
-// import Stats from '../components/Stats';
-// import Modal from '../components/Modal';
-// import IconButton from '../components/IconButton';
-// import { ReactComponent as AddIcon } from '../icons/add.svg';
-// import { todosOperations, todosSelectors } from '../redux/todos';
-//========== ============
 import 'modern-normalize/modern-normalize.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

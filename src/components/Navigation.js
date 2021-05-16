@@ -18,9 +18,11 @@ const styles = {
 
 const Navigation = ({ isAuthenticated }) => (
   <nav>
-    <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-      Главная
-    </NavLink>
+    {!isAuthenticated && (
+      <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+        Home
+      </NavLink>
+    )}
 
     {isAuthenticated && (
       <NavLink
@@ -29,7 +31,7 @@ const Navigation = ({ isAuthenticated }) => (
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        Контакты
+        Phonebook
       </NavLink>
     )}
   </nav>

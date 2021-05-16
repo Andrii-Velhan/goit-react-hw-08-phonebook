@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
-
 class RegisterView extends Component {
   state = {
     name: '',
@@ -37,44 +25,42 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Страница регистрации</h1>
+        <h1>Enter your data</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-          style={styles.form}
-          autoComplete="off"
-        >
-          <label style={styles.label}>
+        <form onSubmit={this.handleSubmit} className="Form" autoComplete="off">
+          <label className="Label" htmlFor="name">
             Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
           </label>
-
-          <label style={styles.label}>
+          <input
+            type="text"
+            name="name"
+            className="Form__input"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <label className="Label" htmlFor="email">
             Mail
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
           </label>
-
-          <label style={styles.label}>
+          <input
+            type="email"
+            name="email"
+            className="Form__input"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <label className="Label" htmlFor="password">
             Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <button type="submit">Registration</button>
+          </label>{' '}
+          <input
+            type="password"
+            name="password"
+            className="Form__input"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <button type="submit" className="Form__button">
+            Registration
+          </button>
         </form>
       </div>
     );

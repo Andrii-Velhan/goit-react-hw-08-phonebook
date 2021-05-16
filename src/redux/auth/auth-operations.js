@@ -23,12 +23,12 @@ const register = credentials => async dispatch => {
 
   try {
     const response = await axios.post('/users/signup', credentials);
-    console.log(response.data);
+    // console.log(response.data);
 
     token.set(response.data.token);
     dispatch(authActions.registerSuccess(response.data));
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(authActions.registerError(error.message));
   }
 };

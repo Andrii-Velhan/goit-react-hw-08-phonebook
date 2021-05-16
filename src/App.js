@@ -6,7 +6,7 @@ import { authOperations } from './redux/auth';
 import { connect } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
-
+import Spinner from './components/Spinner';
 const HomeView = lazy(() => import('./views/HomeView'));
 const RegisterView = lazy(() => import('./views/RegisterView'));
 const LoginView = lazy(() => import('./views/LoginView'));
@@ -21,9 +21,9 @@ class App extends Component {
       <Container>
         <AppBar />
 
-        <Suspense fallback={<h2>Loading...</h2>}>
+        <Suspense fallback={<Spinner />}>
           <Switch>
-            <PublicRoute exact path="/" component={HomeView} />
+            <PublicRoute exact path="/" restricted component={HomeView} />
             <PublicRoute
               path="/register"
               restricted

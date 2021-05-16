@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './ContactForm.scss';
 import Notification from '../Notification';
 import { connect } from 'react-redux';
 import { phoneBookSelectors, phoneBookOperations } from '../../redux/phoneBook';
@@ -75,7 +74,7 @@ class ContactForm extends Component {
     return (
       <>
         <Notification message={message} />
-        <form className="ContactForm" onSubmit={this.handleSubmit}>
+        <form className="Form" onSubmit={this.handleSubmit}>
           <label className="Label" htmlFor="name">
             Name
           </label>
@@ -83,7 +82,7 @@ class ContactForm extends Component {
             type="text"
             value={name}
             id="name"
-            className="ContactForm__input"
+            className="Form__input"
             name="name"
             onChange={this.handleChange}
             placeholder="Anton Cherny"
@@ -97,7 +96,7 @@ class ContactForm extends Component {
             type="tel"
             value={number}
             id="number"
-            className="ContactForm__input"
+            className="Form__input"
             name="number"
             // pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
             required
@@ -105,7 +104,7 @@ class ContactForm extends Component {
             placeholder="+38 (066) 000-00-00"
           />
 
-          <button type="submit" className="ContactForm__button">
+          <button type="submit" className="Form__button">
             Add contact
           </button>
         </form>
